@@ -58,11 +58,11 @@ num=$1
 		double_first=$((RANDOM%2))
 		double_second=$((RANDOM%2))
 
-		if [[ $double_first == 1 && $double_second == 1  ]]
+		if [[ $double_first == $HEAD && $double_second == $HEAD  ]]
 		then
 			doublet_operation[opr_$i]=HH
 			HH=$(($HH+1))
-		elif [[ $double_first == $HEAD && $double_second == 0  ]]
+		elif [[ $double_first == $HEAD && $double_second == $TAIL ]]
 		then
 			doublet_operation[opr_$i]=HT
 			HT=$(($HT+1))
